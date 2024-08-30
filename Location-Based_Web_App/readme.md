@@ -124,10 +124,9 @@ pip install -r requirements.txt
 
 ### 7\. Add Initial Data
 
-Create a migration to load initial data from `data.json`. Follow the tutorial to create a data migration file and load data:
+Create a migration to load initial data from `data.json`.:
 
 ```sh
-python manage.py makemigrations shops --empty
 python manage.py migrate
 ```
 
