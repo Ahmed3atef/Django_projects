@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    color: #1DB954;
+}
+.song-item {
+    background-color: #282828;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+.song-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
