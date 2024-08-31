@@ -7,8 +7,8 @@
 A Django-REST backend project with semple frontend , Musicfy is website for hosting musics and play it , the front-end made by ChatGPT
 and i programmed the backend , it using postgres database to store the info for each music that uploaded .
 
-!['website frontend'](/image.png)
-!['website backend'](/swagger.png)
+!['website frontend'](image.png)
+!['website backend'](swagger.png)
 
 **Table of Contents**
 
