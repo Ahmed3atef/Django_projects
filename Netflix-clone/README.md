@@ -7,7 +7,7 @@
 a strem website which clone the Netflix site , programmed with django and used postgres SQL to add data into database.
 user can login or signup to browse movies that add to website , website support adding movies from admin site but first you must have supper user account
 
-![front page](/readme_media/readme.png)
+![front page](readme_media/readme.png)
 
 **Table of Contents**
 
