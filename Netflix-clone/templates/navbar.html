@@ -1,0 +1,46 @@
+
+
+{% block navbar %}
+<header class="p-5 flex justify-between items-center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" height="30" alt="Netflix Logo" width="110">
+    
+    
+    <nav class="flex space-x-5">
+        <span><a href="{% url "index" %}">Home</a></span>
+        
+        <div class="dropdown">
+            <span id="dropdownMenuButton" class="cursor-pointer">Genres ▼</span>
+            
+            <div id="dropdownMenu" class="dropdown-content hidden">
+                <ul><a href="{% url "genre" "action" %}">Action</a></ul>
+                <ul><a href="{% url "genre" "comedy" %}">Comedy</a></ul>
+                <ul><a href="{% url "genre" "drama" %}">Drama</a></ul>
+                <ul><a href="{% url "genre" "horror" %}">Horror</a></ul>
+                <ul><a href="{% url "genre" "romance" %}">Romance</a></ul>
+                <ul><a href="{% url "genre" "science_fiction" %}/">Science Fiction</a></ul>
+                <ul><a href="{% url "genre" "fantasy"%}">Fantasy</a></ul>
+            </div>
+        </div>
+
+        <span><a href="{% url "mylist" %}">My List</a></span>
+    </nav>
+
+
+    <div class="flex space-x-5 items-center">
+        <form action="{% url "search" %}" method="POST">
+            {% csrf_token %}
+            <input type="search" name="search_term" placeholder="Search" class="bg-gray-700 p-2 rounded">
+            <button class="bg-red-600 text-white p-2 rounded hover:bg-red-500">Search</button>
+        </form>
+        <div class="relative">
+            {% if user.is_authenticated %}
+                <a href="#" class="block p-2">Welcome, {{user.username}}</a>
+                <a href="{% url "logout" %}" class="block p-2">Logout</a>
+            {% else %}
+                <a href="{% url "login" %}" class="block p-2">Login</a>
+            {% endif %}
+            
+        </div>
+    </div>
+</header>
+{% endblock navbar %}
